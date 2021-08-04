@@ -1,10 +1,13 @@
 import React from 'react';
 import ResponsiveDrawer from '../components/Drawer/ResponsiveDrawer';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 const Home = () => (
   <div>
     <ResponsiveDrawer />
-    <main>Holasdasdsada</main>
+    <div>
+      <SearchBar />
+    </div>
   </div>
 );
 
