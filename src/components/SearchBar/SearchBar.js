@@ -7,8 +7,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '400px',
-    width: '100%',
+    height: '100px',
   },
 }));
 
@@ -16,7 +15,11 @@ const SearchBar = () => {
   const classes = useStyles();
   return (
     <form className={classes.root}>
-      <TextField id="standard-basic" label="Buscar..." variant="outlined" />
+      <TextField
+        id="standard-basic"
+        label="Nombre del Skin..."
+        variant="outlined"
+      />
     </form>
   );
 };
