@@ -10,7 +10,10 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - uses: actions/checkout@v2
-      - uses: raulanatol/jest-coverage-comment-action@main
+      - uses: artiomtr/jest-coverage-report-action@v2.0-rc.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          jest-command: 'npm run test'
+          # prevent PRs that do not comply with 95% or more
+          # unit test coverage
+          threshold: 95
+          test-script: npm run test
