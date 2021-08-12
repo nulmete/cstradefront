@@ -16,4 +16,4 @@ jobs:
           # prevent PRs that do not comply with 95% or more
           # unit test coverage
           threshold: 95
-          test-script: npm run test
+          test-script: npm run test:coverage

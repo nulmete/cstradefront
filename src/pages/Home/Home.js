@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import Layout from '../../components/Layout/Layout';
-import SearchBar from '../../components/SearchBar/SearchBar';
-import ButtonSubmit from '../../components/Button/Button';
+import React from 'react';
 
 const Home = () => {
-  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    console.log('clicked');
+  };
+
   return (
-    <Layout>
-      <SearchBar />
-      <ButtonSubmit onClick={() => setCount((c) => c + 1)} />
-    </Layout>
+    <button type="button" onClick={handleClick}>
+      click
+    </button>
   );
 };
 
