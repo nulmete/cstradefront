@@ -10,9 +10,6 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - uses: actions/checkout@v2
-      - uses: artiomtr/jest-coverage-report-action@v2.0-rc.1
+      - uses: raulanatol/jest-coverage-comment-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          # prevent PRs that do not comply with 95% or more
-          # unit test coverage
-          threshold: 95
