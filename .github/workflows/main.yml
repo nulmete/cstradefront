@@ -13,3 +13,6 @@ jobs:
       - uses: artiomtr/jest-coverage-report-action@v2.0-rc.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          # prevent PRs that do not comply with 95% or more
+          # unit test coverage
+          threshold: 95

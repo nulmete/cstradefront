@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core';
@@ -11,12 +12,17 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const ButtonSubmit = () => {
+const ButtonSubmit = (props) => {
   const style = useStyles();
 
   return (
     <div>
-      <Button className={style.root} variant="contained" color="primary">
+      <Button
+        {...props}
+        className={style.root}
+        variant="contained"
+        color="primary"
+      >
         Buscar
       </Button>
     </div>
