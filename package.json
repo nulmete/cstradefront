@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "npm run test --silent --ci --coverage --testLocationInResults --json --outputFile='report.json'",
+    "test:coverage": "npm run test -- --silent --ci --coverage --testLocationInResults --json --outputFile='report.json'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
