@@ -4,6 +4,6 @@ import Home from './Home';
 
 test('Test Home.js', () => {
   const { getByText } = render(<Home />);
-  const homeText = getByText('Responsive drawer');
+  const homeText = getByText('Responsive');
   expect(homeText).toBeTruthy();
 });
