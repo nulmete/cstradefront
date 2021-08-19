@@ -26,7 +26,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: jest-sonar-report
-          path: test-report.xml
+          path: reports/test-report.xml
 
   sonarqube:
     runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: jest-sonar-report
-        path: test-report.xml
+        path: reports/test-report.xml
     # Triggering SonarQube analysis as results of it are required by Quality Gate check
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
@@ -53,8 +53,8 @@ jobs:
         args: >
           -Dsonar.projectKey=sonarjest
           -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-          -Dsonar.testExecutionReportPaths=test-report.xml
-          -Dsonar.genericcoverage.unitTestReportPaths=test-report.xml
+          -Dsonar.testExecutionReportPaths=reports/test-report.xml
+          -Dsonar.genericcoverage.unitTestReportPaths=reports/test-report.xml
       env:
         SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST }}
