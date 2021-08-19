@@ -37,15 +37,18 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: code-coverage-report
-        path: coverage/
+        path: testcoverage
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: testcoverage
     # Triggering SonarQube analysis as results of it are required by Quality Gate check
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
       with:
         args: >
           -Dsonar.projectKey=sonarjest
-          -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-          -Dsonar.testExecutionReportPaths=coverage/test-report.xml
+          -Dsonar.javascript.lcov.reportPaths=testcoverage/lcov.info
+          -Dsonar.testExecutionReportPaths=testcoverage/test-report.xml
       env:
         SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST }}
