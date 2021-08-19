@@ -21,7 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "npm run test -- --silent --ci --coverage --watchAll=false --testLocationInResults --json --outputFile='report.json' --testResultsProcessor='jest-sonar-reporter'",
+    "test:coverage": "npm run test -- --silent --ci --coverage --watchAll=false --testLocationInResults --json --outputFile='report.json' --testResultsProcessor jest-sonar-reporter",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
