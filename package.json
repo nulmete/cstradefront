@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "npm run test -- --silent --ci --coverage --watchAll=false --testLocationInResults --json --outputFile='report.json'",
+    "test:coverage": "npm run test -- --silent --ci --coverage --watchAll=false --testLocationInResults --json --outputFile='report.json' --testResultsProcessor='jest-sonar-reporter'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -52,6 +52,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "jest-sonar-reporter": "^2.0.0",
     "prettier": "^2.1.1"
   }
 }

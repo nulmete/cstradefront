@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/nicolasulmete/cstradefront/src/pages/Home/Home.test.js">
+    <testCase name="Test Home.js" duration="26"/>
+  </file>
+</testExecutions>
