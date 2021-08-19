@@ -47,8 +47,8 @@ jobs:
       with:
         args: >
           -Dsonar.projectKey=sonarjest
-          -Dsonar.javascript.lcov.reportPaths=testcoverage/lcov.info
-          -Dsonar.testExecutionReportPaths=testcoverage/test-report.xml
+          -Dsonar.javascript.lcov.reportPaths=testcoverage/coverage/lcov.info
+          -Dsonar.testExecutionReportPaths=testcoverage/reports/test-report.xml
       env:
         SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST }}
