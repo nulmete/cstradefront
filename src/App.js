@@ -37,7 +37,7 @@ const App = () => {
 
   return (
     <div className={styles.root}>
-      <div>Count: {count}</div>
+      <p>Count: {count}</p>
       <div className={styles.buttonsContainer}>
         <CustomButton type="button" onClick={handleDecrement}>
           -1

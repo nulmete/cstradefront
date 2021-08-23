@@ -1,9 +1,23 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent, prettyDOM } from '@testing-library/react';
 import App from './App';
 
 test('Test App.js', () => {
-  const { getByText } = render(<App />);
-  const homeBtnText = getByText('Sumar 1');
-  expect(homeBtnText).toBeTruthy();
+  const { container, getByText } = render(<App />);
+
+  const incrementBtn = getByText('+1');
+  const decrementBtn = getByText('-1');
+  const resetBtn = getByText('Reset');
+
+  const countLabel = container.querySelector('p');
+  expect(countLabel).toHaveTextContent('Count: 0');
+
+  fireEvent.click(incrementBtn);
+  expect(countLabel).toHaveTextContent('Count: 1');
+
+  fireEvent.click(resetBtn);
+  expect(countLabel).toHaveTextContent('Count: 0');
+
+  fireEvent.click(decrementBtn);
+  expect(countLabel).toHaveTextContent('Count: -1');
 });
