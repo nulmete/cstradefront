@@ -55,6 +55,12 @@
     "prettier": "^2.1.1"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js",
+      "!src/reportWebVitals.js",
+      "!src/setupTests.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 70,
