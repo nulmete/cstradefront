@@ -4,7 +4,6 @@ import App from "./App";
 
 test("Test App.js", () => {
   const { container, getByText } = render(<App />);
-
   const incrementBtn = getByText("+1");
   const decrementBtn = getByText("-1");
   const resetBtn = getByText("Reset");
