@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "test:precommit": "npm run test -- --ci --watchAll=false --findRelatedTests --bail",
     "test:coverage": "npm run test -- --silent --ci --coverage --watchAll=false --testLocationInResults --testResultsProcessor jest-sonar-reporter",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint --fix",
     "prettier:write": "prettier --write",
     "eject": "react-scripts eject",
     "prepare": "husky install"
@@ -88,7 +88,7 @@
     "indent": 2
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
+    "src/**/*.{js,jsx,ts,tsx}": [
       "npm run lint:fix",
       "npm run prettier:write",
       "npm run test:precommit"

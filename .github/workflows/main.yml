@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   test:
@@ -71,4 +71,3 @@ jobs:
   #     timeout-minutes: 5
   #     env:
   #      SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
-
