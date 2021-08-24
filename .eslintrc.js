@@ -1,13 +1,13 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     "plugin:react/recommended",
     "airbnb",
     "prettier",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -24,6 +24,5 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/state-in-constructor": "off"
   },
 };
