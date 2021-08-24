@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import App from "./App";
 
-test("Test App.js", () => {
+test("App.js", () => {
   const { container, getByText } = render(<App />);
   const incrementBtn = getByText("+1");
   const decrementBtn = getByText("-1");
